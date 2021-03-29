@@ -94,9 +94,8 @@ public class TestEntityProviderTest {
 
     @Test
     public void updateFail()throws IOException{
-        TestEntity updateEntity = null;
         ITestEntityProvider instance = new TestEntityProvider();
-        Assert.assertFalse(instance.getById(TestEntity.class, 2).isPresent());
+        Assert.assertFalse(instance.getById(TestEntity.class, 2656).isPresent());
     }
 
     @Test

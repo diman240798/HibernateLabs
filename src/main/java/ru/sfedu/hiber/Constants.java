@@ -56,6 +56,7 @@ public class Constants {
             BUCKET,
             RECEIPT + "_" + PRODUCT,
             RECEIPT,
+            CATEGORY + "_" + PRODUCT,
             COMPUTER,
             FRIDGE,
             SODA,
@@ -85,4 +86,41 @@ public class Constants {
 
 
     public static final String LAB = "lab";
+
+    /// LAB 1
+    public static final String LAB_1_GET_SCHEMAS = "get_list_schemas";
+    public static final String LAB_1_GET_TABLES = "get_list_tables";
+    public static final String LAB_1_GET_ROLE_TABLES = "get_list_tables_type";
+    public static final String LAB_1_GET_TABLES_TYPE = "get_list_role_tables_grant";
+
+    /// LAB 2
+    public static final String LAB_2_GET_BY_ID = "getById";
+    public static final String LAB_2_SAVE = "save";
+    public static final String LAB_2_UPDATE = "update";
+    public static final String LAB_2_DELETE = "delete";
+
+    /// LAB 3
+    public static final String LAB_3_MAPPED = "mapped";
+    public static final String LAB_3_TABLE_PER_CLASS = "table_per_class";
+    public static final String LAB_3_SINGLE_TABLE = "single_table";
+    public static final String LAB_3_JOINED = "joined";
+
+    public static final String LAB_3_DELETE_TYPE_ACCOUNT = "deleteTypeAccount";
+    public static final String LAB_3_UPDATE_TYPE_ACCOUNT = "updateTypeAccount";
+    public static final String LAB_3_GET_BY_TYPE_ACCOUNT = "getByTypeAccount";
+    public static final String LAB_3_GET_BY_ACCOUNTS = "getByAccounts";
+    public static final String LAB_3_SAVE = "save";
+
+    /// LAB 4
+    public static final String LAB_4_COMPONENT = "component";
+    public static final String LAB_4_LIST = "list";
+    public static final String LAB_4_MAP = "map";
+    public static final String LAB_4_MAP_COMPONENT = "map_component";
+    public static final String LAB_4_SET = "set";
+
+    public static final String LAB_4_GET = "get";
+    public static final String LAB_4_ADD = "add";
+    public static final String LAB_4_DELETE = "delete";
+    public static final String LAB_4_UPDATE = "update";
+
 }

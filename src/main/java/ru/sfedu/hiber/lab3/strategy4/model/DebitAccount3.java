@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
-@Table(name="debit_account3")
+@Table(name = "debit_account3")
 @PrimaryKeyJoinColumn(name = "account_id")
 public class DebitAccount3 extends Account3 implements Serializable {
 

@@ -56,7 +56,59 @@ java -jar shop.jar lab 1 get_list_role_tables_grant
 
 
 /// LAB 2
-java -jar shop.jar lab 2 getById
-java -jar shop.jar lab 2 save
-java -jar shop.jar lab 2 update
-java -jar shop.jar lab 2 delete
+java -jar shop.jar lab 2 getById 1
+java -jar shop.jar lab 2 save name description 123 123
+java -jar shop.jar lab 2 update 1 nameNew
+java -jar shop.jar lab 2 delete 1
+
+
+/// LAB 3
+java -jar shop.jar lab 3 mapped deleteTypeAccount 104
+java -jar shop.jar lab 3 mapped updateTypeAccount 104 newName
+java -jar shop.jar lab 3 mapped getByTypeAccount 104
+java -jar shop.jar lab 3 mapped save owner 1000 1000 1000 1000
+
+java -jar shop.jar lab 3 table_per_class deleteTypeAccount 11
+java -jar shop.jar lab 3 table_per_class updateTypeAccount 1 newName
+java -jar shop.jar lab 3 table_per_class getByTypeAccount 11
+java -jar shop.jar lab 3 table_per_class save owner 1000 1000 1000 1000
+java -jar shop.jar lab 3 table_per_class getByAccounts 11
+
+java -jar shop.jar lab 3 single_table deleteTypeAccount 11
+java -jar shop.jar lab 3 single_table updateTypeAccount 1 newName
+java -jar shop.jar lab 3 single_table getByTypeAccount 11
+java -jar shop.jar lab 3 single_table save owner 1000 1000 1000 1000
+java -jar shop.jar lab 3 single_table getByAccounts 11
+
+java -jar shop.jar lab 3 joined deleteTypeAccount 11
+java -jar shop.jar lab 3 joined updateTypeAccount 11
+java -jar shop.jar lab 3 joined getByTypeAccount 1 newName
+java -jar shop.jar lab 3 joined save owner 1000 1000 1000 1000
+java -jar shop.jar lab 3 joined getByAccounts 11
+
+/// LAB 4
+java -jar shop.jar lab 4 component get 0
+java -jar shop.jar lab 4 component add 2 Soda 2 Fanta 1.5 105
+java -jar shop.jar lab 4 component delete 0
+java -jar shop.jar lab 4 component update 0 newName
+
+java -jar shop.jar lab 4 list get 0
+java -jar shop.jar lab 4 list add 2 Soda 2 Fanta 1.5 105
+java -jar shop.jar lab 4 list delete 0
+java -jar shop.jar lab 4 list update 0 newName
+
+java -jar shop.jar lab 4 map get 0
+java -jar shop.jar lab 4 map add 2 Soda 2 Fanta 1.5 105
+java -jar shop.jar lab 4 map delete 0
+java -jar shop.jar lab 4 map update 0 newName
+
+java -jar shop.jar lab 4 map_component get 0
+java -jar shop.jar lab 4 map_component add 2 Soda 2 Fanta 1.5 105
+java -jar shop.jar lab 4 map_component delete 0
+java -jar shop.jar lab 4 map_component update 0 newName
+
+java -jar shop.jar lab 4 set get 0
+java -jar shop.jar lab 4 set add 2 Soda 2 Fanta 1.5 105
+java -jar shop.jar lab 4 set delete 0
+java -jar shop.jar lab 4 set update 0 newName
+

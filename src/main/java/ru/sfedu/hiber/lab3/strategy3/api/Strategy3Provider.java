@@ -5,9 +5,6 @@ import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import ru.sfedu.hiber.lab3.strategy2.model.Account1;
-import ru.sfedu.hiber.lab3.strategy2.model.CreditAccount1;
-import ru.sfedu.hiber.lab3.strategy2.model.DebitAccount1;
 import ru.sfedu.hiber.lab3.strategy3.model.Account2;
 import ru.sfedu.hiber.lab3.strategy3.model.CreditAccount2;
 import ru.sfedu.hiber.lab3.strategy3.model.DebitAccount2;
@@ -18,14 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class Strategy3Provider implements IProvider{
+public class Strategy3Provider implements IProvider {
     private final static Logger LOG = LogManager.getLogger(Strategy3Provider.class);
 
-    public Strategy3Provider()throws IOException{
+    public Strategy3Provider() throws IOException {
     }
 
     @Override
-    public Optional<List> getByAccounts(){
+    public Optional<List> getByAccounts() {
         Session session;
         List accounts = null;
         Transaction transaction = null;
@@ -33,31 +30,30 @@ public class Strategy3Provider implements IProvider{
         try {
             transaction = session.beginTransaction();
             accounts = session.createQuery("FROM Account2").list();
-        }catch (Exception e){
+        } catch (Exception e) {
             LOG.error(e);
             transaction.rollback();
-        }finally {
+        } finally {
             session.close();
         }
         return Optional.of(accounts);
     }
 
     @Override
-    public <T> Optional<T> getByTypeAccount(long id){
+    public <T> Optional<T> getByTypeAccount(long id) {
         Session session;
         Object typeAccount = null;
         Transaction transaction = null;
         session = getSession();
         try {
             transaction = session.beginTransaction();
-            //typeAccount = entity.getName().equals(CreditAccount1.class.getName()) ? session.get(CreditAccount1.class, id) : session.get(DebitAccount1.class, id);
             typeAccount = session.createQuery("FROM Account2 p WHERE p.id = :id", Account2.class)
                     .setParameter("id", id)
                     .getResultList().get(0);
-        }catch (Exception e){
+        } catch (Exception e) {
             LOG.error(e);
             transaction.rollback();
-        }finally {
+        } finally {
             session.close();
         }
         return (Optional<T>) Optional.of(typeAccount);
@@ -79,16 +75,16 @@ public class Strategy3Provider implements IProvider{
             id = (long) session.save(debitAccount);
             ids.add(id);
             transaction.commit();
-        }catch (NullPointerException e){
+        } catch (NullPointerException e) {
             LOG.error(e);
-        }finally {
+        } finally {
             session.close();
         }
         return ids;
     }
 
     @Override
-    public <T> Optional<T> updateTypeAccount(long id, String name){
+    public <T> Optional<T> updateTypeAccount(long id, String name) {
         Session session = null;
         Transaction transaction;
         Object updateEntity = null;
@@ -100,16 +96,16 @@ public class Strategy3Provider implements IProvider{
             transaction = session.beginTransaction();
             session.update(updateEntity);
             transaction.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             LOG.error(e);
-        }finally {
+        } finally {
             session.close();
         }
         return (Optional<T>) Optional.of(updateEntity);
     }
 
     @Override
-    public <T> boolean deleteTypeAccount(long id){
+    public <T> boolean deleteTypeAccount(long id) {
         Session session = null;
         Transaction transaction;
         Object deleteEntity;
@@ -119,7 +115,7 @@ public class Strategy3Provider implements IProvider{
             transaction = session.beginTransaction();
             session.delete(deleteEntity);
             transaction.commit();
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             LOG.error(e);
             return false;
         } finally {
@@ -128,7 +124,7 @@ public class Strategy3Provider implements IProvider{
         return true;
     }
 
-    private Session getSession(){
+    private Session getSession() {
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         return sessionFactory.openSession();
     }

@@ -1,7 +1,5 @@
 package ru.sfedu.hiber.lab3.strategy3.api;
 
-import ru.sfedu.hiber.lab3.strategy2.model.CreditAccount1;
-import ru.sfedu.hiber.lab3.strategy2.model.DebitAccount1;
 import ru.sfedu.hiber.lab3.strategy3.model.CreditAccount2;
 import ru.sfedu.hiber.lab3.strategy3.model.DebitAccount2;
 

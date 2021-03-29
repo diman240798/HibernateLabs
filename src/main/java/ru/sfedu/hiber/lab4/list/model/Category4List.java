@@ -17,11 +17,11 @@ public class Category4List implements Serializable {
     private String name;
 
     @Column(name="prod_id")
-    private int productId;
+    private long productId;
 
     public Category4List() { }
 
-    public Category4List(String name, int productId) {
+    public Category4List(String name, long productId) {
         this.name = name;
         this.productId = productId;
     }
@@ -42,11 +42,11 @@ public class Category4List implements Serializable {
         this.name = name;
     }
 
-    public int getProductId() {
+    public long getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(long productId) {
         this.productId = productId;
     }
 

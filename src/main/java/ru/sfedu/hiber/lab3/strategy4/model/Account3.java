@@ -6,9 +6,9 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
-@Table(name="account3")
+@Table(name = "account3")
 @Inheritance(strategy = InheritanceType.JOINED)
-public  class Account3 implements Serializable {
+public class Account3 implements Serializable {
 
     public Account3() {
     }

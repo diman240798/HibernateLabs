@@ -40,7 +40,7 @@ public class ListProductCrud4Test {
     }
 
     private Category4List createCategory() {
-        return new Category4List("Soda", 0);
+        return new Category4List("Soda", 0L);
     }
 
     @Test
