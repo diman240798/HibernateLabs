@@ -126,7 +126,7 @@ public class DataProviderHibernate implements DataProvider {
 
     @Override
     public List<Computer> getComputersSql() {
-        return HibernateUtil.getAllComputeSql();
+        return HibernateUtil.getAllComputerSql();
     }
 
     @Override

@@ -22,9 +22,9 @@ public class TestEntityProviderTest {
     @Test
     public void getByIdSuccess() throws IOException{
         ITestEntityProvider instance = new TestEntityProvider();
-        Optional<TestEntity> entity = instance.getById(TestEntity.class, (long)1);
+        Optional<TestEntity> entity = instance.getById(TestEntity.class, 35);
         LOG.info(entity.get());
-        assertEquals((long)1, entity.get().getId());
+        assertEquals(35, entity.get().getId());
     }
 
     @Test

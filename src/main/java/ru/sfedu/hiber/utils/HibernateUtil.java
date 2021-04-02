@@ -175,16 +175,16 @@ public class HibernateUtil {
 
     public static List<Computer> getAllComputerHql() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            final String queryString = "FROM " + Constants.COMPUTER_ENTITY;
+            String queryString = "FROM " + Constants.COMPUTER_ENTITY;
             Query query = session.createQuery(queryString);
             List<Computer> data = query.getResultList();
             return data;
         }
     }
 
-    public static List<Computer> getAllComputeSql() {
+    public static List<Computer> getAllComputerSql() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            final String queryString = "select p.id, name, weight, price, processorname, processorpower, graphicsname, graphicsvolume, integratedbluetooth, integratedwifi from " + Constants.COMPUTER + " as c inner join " + Constants.PRODUCT + " as p on p.id = c.id";
+            String queryString = "select p.id, name, weight, price, processorname, processorpower, graphicsname, graphicsvolume, integratedbluetooth, integratedwifi from " + Constants.COMPUTER + " as c inner join " + Constants.PRODUCT + " as p on p.id = c.id";
             NativeQuery<Computer> sqlQuery = session.createSQLQuery(queryString);
             List<Computer> computers = sqlQuery.getResultList();
             return computers;

@@ -64,12 +64,6 @@ public class Constants {
             CATEGORY
     );
 
-    // Data Providers
-    public static final String XML_DATA_PROVIDER = "xml";
-    public static final String CSV_DATA_PROVIDER = "csv";
-    public static final String JDBC_DATA_PROVIDER = "jdbc";
-
-
     // Categories
     public static final String CATEGORY_FRIDGE = "fridge";
     public static final String CATEGORY_SODA = "soda";
@@ -108,7 +102,6 @@ public class Constants {
     public static final String LAB_3_DELETE_TYPE_ACCOUNT = "deleteTypeAccount";
     public static final String LAB_3_UPDATE_TYPE_ACCOUNT = "updateTypeAccount";
     public static final String LAB_3_GET_BY_TYPE_ACCOUNT = "getByTypeAccount";
-    public static final String LAB_3_GET_BY_ACCOUNTS = "getByAccounts";
     public static final String LAB_3_SAVE = "save";
 
     /// LAB 4
